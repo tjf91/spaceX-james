@@ -41,11 +41,20 @@ header{
     
 
 }
-.navbar:hover {
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  transition: 1.5s;
-}
+
+.navbar::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: white;
+    transition: 1.5s;
+  }
+  
+  .navbar:hover::after {
+    width: 100%;
+  }
+
 
 .spaceXlogo{
     width: 30%;
